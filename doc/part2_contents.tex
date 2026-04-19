@@ -1,0 +1,216 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Command-Line Arguments
+
+\section{Command-Line Arguments}
+\defverbatim[colored]\contentCLA{
+\begin{minted}{python}
+from sys import argv, exit
+
+if len(argv) != 3:
+    print('Syntax: %s INPUT_FILENAME OUTPUT_FILENAME' % argv[0])
+    print('        %s log.txt analysis.csv' % argv[0])
+    exit(1)
+input_filename  = argv[1]
+output_filename = argv[2]
+
+print('%s -> %s' % (input_filename, output_filename))
+\end{minted}
+}
+\begin{frame}
+    \frametitle{Command-Line Arguments}
+    \vspace{3mm}
+    \contentCLA
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Files
+
+\section{Files}
+\begin{frame}
+    \vspace{25mm}
+    \begin{center}
+        \Huge{Part 7:\\Files}
+    \end{center}
+\end{frame}
+
+\subsection{Basics}
+\defverbatim[colored]\contentFilesI{
+\begin{minted}{python}
+fo = open(filename, mode)
+# do something with 'fo'
+fo.close()
+\end{minted}
+}
+\defverbatim[colored]\contentFilesIr{
+\begin{minted}{python}
+lines = fo.readlines()
+\end{minted}
+}
+\defverbatim[colored]\contentFilesIw{
+\begin{minted}{python}
+fo.writelines(lines)
+\end{minted}
+}
+\begin{frame}
+    \frametitle{\textbf{Files:} Basics}
+    \vspace{0mm}
+    \contentFilesI
+    \pause
+    \vspace{3mm}
+    Modes:
+    \begin{itemize}
+        \item \texttt{'r'} read mode \textbf{(default $\Rightarrow$ may be omitted)}
+        \item \texttt{'w'} write mode (clears file on open)
+        \item \texttt{'a'} append mode (continues at end of file)
+    \end{itemize}
+    \pause
+    \vspace{3mm}
+    Read using:
+    \contentFilesIr
+    \pause
+    \vspace{3mm}
+    Write using:
+    \contentFilesIw
+\end{frame}
+
+\subsection{Implicit Closing of File Objects}
+\defverbatim[colored]\contentFilesII{
+\begin{minted}{python}
+with open(input_filename) as fo:
+    lines = fo.readlines()
+
+with open(output_filename, 'w') as fo:
+    fo.writelines(lines)
+\end{minted}
+}
+\begin{frame}
+    \frametitle{\textbf{Files:} Implicit Closing of File Objects}
+    \vspace{0mm}
+    \contentFilesII
+\end{frame}
+
+\subsection{Reading from a Stream of Lines}
+\defverbatim[colored]\contentFilesIII{
+\begin{minted}{python}
+with open(filename) as fo:
+    for line in fo:
+        print(line)
+\end{minted}
+}
+\begin{frame}
+    \frametitle{\textbf{Files:} Reading from a Stream of Lines}
+    \vspace{0mm}
+    \contentFilesIII
+\end{frame}
+
+\subsection{Directories}
+\defverbatim[colored]\contentListdir{
+\begin{minted}[fontsize=\small]{pycon}
+>>> from os import listdir, path
+>>> listdir('/')
+['var', 'etc', 'run', 'proc', 'media', 'home', 'sbin', 'srv', 'lost+found',
+'boot', 'tmp', 'sys', 'lib32', 'bin', 'dev', 'snap', 'cdrom', 'libx32',
+'root', 'usr', 'lib', 'lib64', 'opt', 'mnt']
+>>> listdir(path.sep.join(['', 'usr']))
+['src', 'local', 'sbin', 'libexec', 'share', 'lib32', 'bin', 'libx32', 'lib',
+'lib64', 'include', 'games']
+>>> path.isfile('/etc')
+False
+>>> path.isdir('/etc')
+True
+>>> path.exists('/etc')
+True
+>>> path.islink('/etc')
+False
+>>> import os
+>>> os.mkdir('/tmp/dir')
+>>> os.unlink('/tmp/somefile')
+\end{minted}
+}
+\begin{frame}
+    \frametitle{\textbf{Files:} Directories}
+    \vspace{-1mm}
+    \contentListdir
+\end{frame}
+
+\subsection{Process Interaction}
+\begin{frame}[fragile]
+    \frametitle{\textbf{Files:} Process Interaction}
+    \vspace{0mm}
+    \inputminted[fontsize=\footnotesize]{python}{../src/processexample.py}
+    \pause
+    \vspace{5mm}
+    {\footnotesize
+    \begin{verbatim}
+$ python3 processexample.py
+bin
+boot
+cdrom
+dev
+etc
+home
+lib
+...
+    \end{verbatim}
+    }
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Marshalling and JSON
+
+\section{Marshalling and JSON}
+\begin{frame}
+    \vspace{25mm}
+    \begin{center}
+        \Huge{Part 8:\\Marshalling and JSON}
+    \end{center}
+\end{frame}
+
+\defverbatim[colored]\contentJSON{
+\begin{minted}[fontsize=\tiny]{pycon}
+>>> import json
+>>> data = {'a': 1, 'b': [1,2,3], 'c': 'abc'}
+>>> data
+{'a': 1, 'b': [1, 2, 3], 'c': 'abc'}
+
+>>> json.dumps(data)
+'{"a": 1, "b": [1, 2, 3], "c": "abc"}'
+>>> s = json.dumps(data, sort_keys=True, indent=4, separators=(',', ': '))
+>>> s
+'{\n    "a": 1,\n    "b": [\n        1,\n        2,\n        3\n    ],\n    "c": "abc"\n}'
+>>> print(s)
+{
+    "a": 1,
+    "b": [
+        1,
+        2,
+        3
+    ],
+    "c": "abc"
+}
+
+>>> data2 = json.loads(s)
+>>> data2
+{'a': 1, 'b': [1, 2, 3], 'c': 'abc'}
+\end{minted}
+}
+\begin{frame}
+    \frametitle{Marshalling and JSON}
+    \vspace{0mm}
+    \contentJSON
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Questions
+
+\section{Questions}
+\begin{frame}
+    \frametitle{\textbf{Questions and Comments?}}
+    \vspace{-15mm}
+    \begin{center}
+    \includegraphics[scale=0.4]{./figs/Boy-asking-question.pdf}
+    \end{center}
+    \vspace{-25mm}
+    \scalebox{0.2}{\url{https://openclipart.org/detail/238687/boy-thinking-of-question}}
+\end{frame}
+

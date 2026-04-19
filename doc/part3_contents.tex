@@ -1,0 +1,134 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Next Steps
+
+\section{Next Steps}
+\begin{frame}
+    \vspace{25mm}
+    \begin{center}
+        \Huge{Part 12:\\Next Steps}
+    \end{center}
+\end{frame}
+
+\subsection{SymPy}
+\begin{frame}[fragile]
+    \frametitle{SymPy}
+    \vspace{2mm}
+    \inputminted[fontsize=\tiny]{python}{../src/sympyexample.py}
+    \pause
+    \vspace{5mm}
+    
+    {\tiny
+    \begin{verbatim}
+Please enter an expression over i and j: 3*i*i+4.83*i+j 
+expr=3*i**2 + 4.83*i + j
+diff(expr, i)=6*i + 4.83
+i=0 j=0 => result=0.000000
+i=1 j=1 => result=8.830000
+i=2 j=2 => result=23.660000
+i=3 j=0 => result=41.490000
+i=4 j=1 => result=68.320000
+i=5 j=2 => result=101.150000
+i=6 j=0 => result=136.980000
+i=7 j=1 => result=181.810000
+i=8 j=2 => result=232.640000
+i=9 j=0 => result=286.470000
+    \end{verbatim}
+    }
+\end{frame}
+
+%\subsection{Potential Themes / Misc}
+%\begin{frame}
+%    \frametitle{Potential Themes / Misc}
+%    \vspace{5mm}
+%    
+%    \begin{itemize}
+%      \item psycho, numba
+%      \item NumPy (u-functions over a matrix)
+%      \item Cython
+%      \item scipy
+%      \item ironpython
+%      \item rpython?
+%      \item ipython
+%      \item jupyter
+%    \end{itemize}
+%\end{frame}
+
+\subsection{Pandas}
+\begin{frame}
+    \frametitle{Pandas}
+    \vspace{3mm}
+    \hspace{105mm}\includegraphics[width=35mm]{../src/running-average.pdf}
+    \vspace{-73mm}\inputminted[fontsize=\footnotesize]{python}{../src/pandas-example.py}
+\end{frame}
+
+\subsection{AsyncIO}
+\begin{frame}[fragile]
+    \frametitle{AsyncIO}
+    \vspace{-2mm}
+    \inputminted[fontsize=\tiny]{python3}{../src/webserver.py}
+    \pause
+    \vspace{2mm}
+    {\tiny
+    \begin{verbatim}
+$ curl localhost:8080/etc/hostname
+thera
+    \end{verbatim}
+    }
+\end{frame}
+
+\subsection{Cairo}
+\begin{frame}
+    \frametitle{Cairo}
+    \vspace{10mm}
+    \hspace{105mm}\includegraphics[width=35mm]{../src/cairoexample.pdf}
+    \vspace{-75mm}\inputminted[fontsize=\footnotesize]{python}{../src/cairoexample.py}
+\end{frame}
+
+%\subsection{BeautifulSoup}
+%\begin{frame}
+%    \frametitle{BeautifulSoup}
+%    \vspace{5mm}
+%    
+%    \begin{itemize}
+%      \item 
+%    \end{itemize}
+%\end{frame}
+
+%\subsection{Managing Modules}
+%\begin{frame}
+%    \frametitle{Managing Modules}
+%    \vspace{5mm}
+%    
+%    \begin{itemize}
+%      \item 
+%    \end{itemize}
+%\end{frame}
+
+\subsection{Other Resources}
+\begin{frame}
+    \frametitle{Other Resources}
+    \vspace{5mm}
+    
+    \begin{itemize}
+      \item This material: \url{https://github.com/aslakjohansen/enigma-python-intro}
+      \item \textsl{Think Python 2nd Edition} by Allen B. Downey (free PDF)\\
+            \url{https://greenteapress.com/wp/think-python-2e/}
+      \item \textsl{Think Stats 2nd Edition} by Allen B. Downey (free PDF)\\
+            \url{https://greenteapress.com/wp/think-stats-2e/}
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Questions
+
+\section{Questions}
+\begin{frame}
+    \frametitle{\textbf{Questions and Comments?}}
+    \vspace{-15mm}
+    \begin{center}
+    \includegraphics[scale=0.4]{./figs/Boy-asking-question.pdf}
+    \end{center}
+    \vspace{-25mm}
+    \scalebox{0.2}{\url{https://openclipart.org/detail/238687/boy-thinking-of-question}}
+\end{frame}
+
