@@ -610,7 +610,7 @@ range(0, 5)
 \end{frame}
 
 \defverbatim[colored]\contentDict{
-\begin{minted}[fontsize=\tiny]{pycon}
+\begin{minted}[fontsize=\small]{pycon}
 >>> {}
 {}
 >>> d = {'jan': 1, 'feb': 2, 'mar': 3}
@@ -628,6 +628,16 @@ range(0, 5)
 True
 >>> 'may' in d
 False
+\end{minted}
+}
+\begin{frame}
+    \frametitle{Dictionary Operations [1/2]}
+    \vspace{0mm}
+    \contentDict
+\end{frame}
+
+\defverbatim[colored]\contentDictII{
+\begin{minted}[fontsize=\small]{pycon}
 >>> d.keys()
 dict_keys(['jan', 'feb', 'mar', 'apr', 'list'])
 >>> list(d.keys())
@@ -645,9 +655,9 @@ list
 \end{minted}
 }
 \begin{frame}
-    \frametitle{Dictionary Operations}
+    \frametitle{Dictionary Operations [2/2]}
     \vspace{0mm}
-    \contentDict
+    \contentDictII
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
