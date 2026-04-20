@@ -555,8 +555,12 @@ range(0, 5)
     \end{center}
 \end{frame}
 
-\defverbatim[colored]\contentList{
-\begin{minted}[fontsize=\tiny]{pycon}
+\begin{frame}[fragile]
+  \frametitle{List Operations}
+  \vspace{-3mm}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{minted}[fontsize=\small]{pycon}
 >>> l = [1,2,3]
 >>> l
 [1, 2, 3]
@@ -573,6 +577,10 @@ range(0, 5)
 >>> l.sort()
 >>> l
 [1, 2, 3, 4, 5, 6, 7]
+      \end{minted}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{minted}[fontsize=\small]{pycon}
 >>> len(l)
 7
 >>> l[2], l[-1]
@@ -585,12 +593,9 @@ range(0, 5)
 [1, 2, 3, 4]
 >>> 4 in l, 42 in l
 (True, False)
-\end{minted}
-}
-\begin{frame}
-    \frametitle{List Operations}
-    \vspace{3mm}
-    \contentList
+      \end{minted}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
