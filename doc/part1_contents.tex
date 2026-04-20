@@ -1,6 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Motivation
 
+\section{Motivation}
 \begin{frame}
     \vspace{25mm}
     \begin{center}
@@ -25,9 +26,65 @@
 
 \subsubsection{To keep up with the evolving landscape}
 \begin{frame}
-    \frametitle{The Why \subpart{To keep up with the evolving landscape}}
-    \vspace{3mm}
-    
+  \frametitle{The Why \subpart{To keep up with the evolving landscape}}
+  \vspace{3mm}
+  \begin{center}
+    \begin{tikzpicture}[]
+      \newcommand{\xspacing}[0]{36mm}
+      \newcommand{\yspacing}[0]{12mm}
+      
+      \tikzstyle{edge}  = [thick,>=stealth,draw=black]
+      \tikzstyle{dedge} = [thick,->,>=stealth,draw=black]
+      \tikzstyle{blank}=[
+        anchor=center,
+        thick,
+        minimum size=0.2,
+      ]
+      \tikzstyle{node}=[
+        blank,
+        circle,
+        draw=purple,
+      ]
+      \tikzstyle{linelabel}=[
+        blank,
+        anchor=west,
+        align=left,
+%        minimum width=40mm,
+      ]
+      
+      \node[blank] (past)    at (-1*\xspacing,0*\yspacing) {\textbf{Past}};
+      \node[blank] (present) at ( 0*\xspacing,0*\yspacing) {\textbf{Present}};
+      \node[blank] (future)  at ( 1*\xspacing,0*\yspacing) {\textbf{Future}};
+      
+      \node[linelabel] ()          at (-2.25*\xspacing,-1*\yspacing) {\textbf{Scripting:}};
+      \node[blank] (scriptpast)    at (-1*\xspacing,-1*\yspacing) {TCL,Perl};
+      \node[blank] (scriptpresent) at ( 0*\xspacing,-1*\yspacing) {Python+Elixir};
+      \node[blank] (scriptfuture)  at ( 1*\xspacing,-1*\yspacing) {Python+Elixir};
+      \draw[dedge] (scriptpast) -- (scriptpresent);
+      \draw[dedge] (scriptpresent) -- (scriptfuture);
+      
+      \node[linelabel] ()          at (-2.25*\xspacing,-2*\yspacing) {\textbf{System:}};
+      \node[blank] (syspast)    at (-1*\xspacing,-2*\yspacing) {C};
+      \node[blank] (syspresent) at ( 0*\xspacing,-2*\yspacing) {C};
+      \node[blank] (sysfuture)  at ( 1*\xspacing,-2*\yspacing) {Rust/Zig};
+      \draw[dedge] (syspast) -- (syspresent);
+      \draw[dedge] (syspresent) -- (sysfuture);
+      
+      \node[linelabel] ()          at (-2.25*\xspacing,-3*\yspacing) {\textbf{Concurrency:}};
+      \node[blank] (concpast)    at (-1*\xspacing,-3*\yspacing) {Go};
+      \node[blank] (concpresent) at ( 0*\xspacing,-3*\yspacing) {Elixir};
+      \node[blank] (concfuture)  at ( 1*\xspacing,-3*\yspacing) {Elixir+Rust};
+      \draw[dedge] (concpast) -- (concpresent);
+      \draw[dedge] (concpresent) -- (concfuture);
+      
+      \node[linelabel] ()          at (-2.25*\xspacing,-4*\yspacing) {\textbf{Presentation:}};
+      \node[blank] (prespast)    at (-1*\xspacing,-4*\yspacing) {Postscript};
+      \node[blank] (prespresent) at ( 0*\xspacing,-4*\yspacing) {Cairo+SVG+TikZ};
+      \node[blank] (presfuture)  at ( 1*\xspacing,-4*\yspacing) {Cairo+SVG+TikZ};
+      \draw[dedge] (prespast) -- (prespresent);
+      \draw[dedge] (prespresent) -- (presfuture);
+    \end{tikzpicture}
+  \end{center}
 \end{frame}
 
 \subsubsection{To learn a new paradigm}
