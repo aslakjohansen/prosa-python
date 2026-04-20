@@ -14,6 +14,7 @@
 \usepackage{fancyvrb} % for different fontsize in verbatim
 \usepackage[T1]{fontenc} % for |
 \usepackage{dirtytalk} % for \say command
+\usepackage{minipage-marginpar} % for the minipagewithmarginpars environment that allows marginpar commands in a minipage
 
 \newcommand{\hlthing}[1]{\textcolor{orange}{#1}}
 \newcommand{\hlcomment}[1]{\textcolor{blue}{#1}}
@@ -39,6 +40,19 @@
 }
 \newcommand{\includeBitmap}[2]{
 \includegraphics[width=#2]{./figs/#1}
+}
+
+\newenvironment{inspiration}[2][0.9]
+{
+  \begin{center}
+  \newcommand{\saveme}{#2}
+  \begin{minipagewithmarginpars}{#1\textwidth}
+}
+{
+  
+  \raggedleft{--- \textsl{\saveme}}
+  \end{minipagewithmarginpars}
+  \end{center}
 }
 
 %% bypass highlighting of syntax errors in minted
