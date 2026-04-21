@@ -274,14 +274,16 @@
 \end{frame}
 
 \subsection{Two Modes of Execution}
-{
-\usebackgroundtemplate{\includeSVGfs{execution}}
+%{
+%\usebackgroundtemplate{\includeSVGfs{execution}}
 \begin{frame}
     \frametitle{Two Modes of Execution}
     \vspace{5mm}
-    
+    \begin{tikzpicture}[remember picture,overlay]
+      \node[overlay,anchor=center] () at (current page.center) {\includeSVGfs{execution}};
+    \end{tikzpicture}
 \end{frame}
-}
+%}
 
 % background color post
 }
@@ -360,12 +362,12 @@ sys.exit() # this is really not necessary
 \end{frame}
 
 \subsection{Types}
-{
-\usebackgroundtemplate{\includeSVGfs{types}}
-\begin{frame}
-    \frametitle{Types}
+\begin{frame}[fragile]
+  \frametitle{Types}
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[overlay,anchor=center] () at (current page.center) {\includeSVGfs{types}};
+  \end{tikzpicture}
 \end{frame}
-}
 
 \subsection{Boolean Operators}
 \defverbatim[colored]\contentBooleans{

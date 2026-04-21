@@ -93,7 +93,7 @@ while (scalar @infiles > 0) {
 	    }
 	    $cmd = $handlers{'Inkscape'} .
 		         " " . $source .
-		         " -z -C " . $outputformat . " " . $target;
+		         " -z -b transparent -C " . $outputformat . " " . $target;
 	    handle_target($source, $target, $cmd);
 	  } elsif ($lines =~ s/^\\includeMAKE(s|)\{([^\}]*)\}\{([^\}]*)\}//) {
 	    $source = $2 . "/" . $3;
