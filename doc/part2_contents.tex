@@ -265,6 +265,32 @@ proto="http" domain="www.google.com" port=":80" path="/"
     
 \end{frame}
 
+\subsubsection{CSV Corrections}
+\begin{frame}[fragile]
+    \frametitle{Exercises \subpart{Level 1} \subpart{CSV Corrections}}
+    \vspace{-1mm}
+    The CSV file format can hold tabular data. The format:
+    \begin{itemize}
+      \item Rows are separated by linebreaks.
+      \item Columns are separated by commas.
+    \end{itemize}
+    
+    \vspace{2mm}
+    Excel is infamous for misinterpreting the CSV format. It uses semicolons instead of commas for separation.
+    
+    \vspace{2mm}
+    The exercise:
+    \begin{enumerate}
+      \item Make a script that takes three parameters so that it can be called like this: \\
+        \textcolor{purple}{\texttt{python3 csv\_reformatter.py fix input.csv output.csv}} \\
+        \textcolor{purple}{\texttt{python3 csv\_reformatter.py unfix input.csv output.csv}}
+      \item Decide on a reasonable intermediate format.
+      \item Write functions for fundamental operations like reading, adjusting and writing data.
+      \item Write the main code that parses the command line arguments, reads the input, adjusts it and writes the output.
+      \item What could go wrong when converting between the two versions of the format?
+    \end{enumerate}
+\end{frame}
+
 \subsection{Level 2}
 \begin{frame}[fragile]
     \frametitle{Exercises \subpart{Level 2}}
