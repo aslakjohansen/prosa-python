@@ -1,5 +1,24 @@
+\definecolor{motiv}{rgb}{    \componentA, \componentB, \componentC}
+\definecolor{intro}{rgb}{    \componentB, \componentC, \componentA}
+\definecolor{started}{rgb}{  \componentC, \componentA, \componentB}
+\definecolor{basics}{rgb}{   \componentA, \componentB, \componentC}
+\definecolor{flow}{rgb}{     \componentB, \componentC, \componentA}
+\definecolor{lists}{rgb}{    \componentC, \componentA, \componentB}
+\definecolor{dicts}{rgb}{    \componentA, \componentB, \componentC}
+\definecolor{strings}{rgb}{  \componentB, \componentC, \componentA}
+\definecolor{oop}{rgb}{      \componentC, \componentA, \componentB}
+\definecolor{higher}{rgb}{   \componentA, \componentB, \componentC}
+\definecolor{mods}{rgb}{     \componentB, \componentC, \componentA}
+\definecolor{pitfalls}{rgb}{ \componentC, \componentA, \componentB}
+\definecolor{exercises}{rgb}{\componentA, \componentB, \componentC}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Motivation
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=motiv}
+\renewcommand{\bgcolor}{motic}
 
 \section{Motivation}
 \begin{frame}
@@ -149,8 +168,16 @@
     \end{center}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Introduction
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=intro}
+\renewcommand{\bgcolor}{intro}
 
 \section{Introduction}
 \begin{frame}
@@ -256,8 +283,16 @@
 \end{frame}
 }
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Getting Started
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=started}
+\renewcommand{\bgcolor}{started}
 
 \section{Getting Started}
 \begin{frame}
@@ -305,8 +340,16 @@ sys.exit() # this is really not necessary
     \contentFirstSteps
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Basic Datatypes and -Structures
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=basics}
+\renewcommand{\bgcolor}{basics}
 
 \section{Basic Datatypes and -Structures}
 \begin{frame}
@@ -446,8 +489,16 @@ True
     \contentTypeIntrospectionII
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Flow Control
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=flow}
+\renewcommand{\bgcolor}{flow}
 
 \section{Flow Control}
 \begin{frame}
@@ -544,8 +595,16 @@ range(0, 5)
     \contentRange
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Lists
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=lists}
+\renewcommand{\bgcolor}{lists}
 
 \section{Lists}
 \begin{frame}
@@ -598,8 +657,16 @@ range(0, 5)
   \end{columns}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Dictionaries
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=dicts}
+\renewcommand{\bgcolor}{dicts}
 
 \section{Dictionaries}
 \begin{frame}
@@ -660,8 +727,16 @@ list
     \contentDictII
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Strings
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=strings}
+\renewcommand{\bgcolor}{strings}
 
 \section{Strings}
 \begin{frame}
@@ -698,8 +773,16 @@ list
     \contentStrings
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Object-Orientation
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=oop}
+\renewcommand{\bgcolor}{oop}
 
 \section{Object-Orientation}
 \begin{frame}
@@ -792,8 +875,16 @@ list
     \inputminted[fontsize=\small]{python}{../src/objectdynamics.py}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Higher-Order Functions
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=higher}
+\renewcommand{\bgcolor}{higher}
 
 \section{Higher-Order Functions}
 \begin{frame}
@@ -826,8 +917,16 @@ list
     \contentLambda
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Working in Modules
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=mods}
+\renewcommand{\bgcolor}{mods}
 
 \section{Working in Modules}
 \begin{frame}
@@ -875,8 +974,16 @@ $ python3 main.py
     \end{verbatim}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pitfalls
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=pitfalls}
+\renewcommand{\bgcolor}{pitfalls}
 
 \section{Pitfalls}
 \begin{frame}
@@ -914,8 +1021,16 @@ $ python3 globals.py
     \end{verbatim}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercises
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=exercises}
+\renewcommand{\bgcolor}{exercises}
 
 \section{Exercises}
 \begin{frame}
@@ -1066,6 +1181,9 @@ int distances[CITY_COUNT][CITY_COUNT] = {
 };
     \end{minted}
 \end{frame}
+
+% background color post
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Questions
