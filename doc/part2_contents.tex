@@ -179,9 +179,9 @@ False
     \end{center}
 \end{frame}
 
-\subsection{Process Interface}
+\subsection{Interface}
 \begin{frame}[fragile]
-  \frametitle{\textbf{Processes:} Process Interface}
+  \frametitle{\textbf{Processes:} Interface}
   \vspace{0mm}
   \begin{center}
     \begin{tikzpicture}[]
@@ -224,8 +224,11 @@ False
       \draw[handover] ([yshift=-1.6cm]caller.north east)
                    -- ([yshift=-1.6cm]callee.north west)
                    node[midway,above] {\scalebox{0.7}{\textsl{\textcolor{purple}{inherits string $\mapsto$ string environment}}}};
-      \draw[stream] ([yshift=-2.4cm]caller.north east)
-                 -- ([yshift=-2.4cm]callee.north west)
+      \draw[handover] ([yshift=-2.4cm]caller.north east)
+                   -- ([yshift=-2.4cm]callee.north west)
+                   node[midway,above] {\scalebox{0.7}{\textsl{\textcolor{purple}{command line arguments}}}};
+      \draw[stream] ([yshift=-3.2cm]caller.north east)
+                 -- ([yshift=-3.2cm]callee.north west)
                  node[midway,above] {\scalebox{0.7}{\textsl{\textcolor{purple}{STDIN stream}}}};
       \draw[stream] ([yshift=2.4cm]callee.south west)
                  -- ([yshift=2.4cm]caller.south east)
