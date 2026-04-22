@@ -11,6 +11,30 @@
     \end{center}
 \end{frame}
 
+\subsection{Mental Model}
+\begin{frame}
+  \frametitle{Files \subpart{Mental Model}}
+  \vspace{3mm}
+  A file has:
+  \begin{itemize}
+    \item At least one location on the filesystem.
+    \item Some set of permissions.
+    \item Contents
+  \end{itemize}
+  
+  \pause
+  \vspace{5mm}
+  The contents is a sequence of bytes.
+  
+  \pause
+  \vspace{5mm}
+  Often, we choose to interpret this sequence as text.
+  
+  \pause
+  \vspace{5mm}
+  Special characters are used to indicate linebreaks.
+\end{frame}
+
 \subsection{Basic Operations}
 \defverbatim[colored]\contentFilesI{
 \begin{minted}{python}
