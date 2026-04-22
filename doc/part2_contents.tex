@@ -504,6 +504,25 @@ lib
     \end{enumerate}
 \end{frame}
 
+\subsection{Offloading to Other Processes}
+\begin{frame}[fragile]
+    \frametitle{Exercises \subpart{Offloading to Other Processes}}
+    \vspace{3mm}
+    Write a script called \texttt{read.py} that takes a filename as a parameter and prints out the contents of that file.
+    
+    \vspace{5mm}
+    Write a script called \texttt{write.py} that takes a filename as a parameter and write whatever it gets on STDIN to this file.
+    
+    \vspace{5mm}
+    Write a script called \texttt{filter.py} that takes a word as a parameter and forwards every line that gets from STDIN to STDOUT if the word is present.
+    
+    \vspace{5mm}
+    Write a script that calls \texttt{read.py}, uses \texttt{filter.py} to filter the result and finally uses \texttt{write.py} to store the result.
+    
+    \vspace{5mm}
+    Hint: \scalebox{0.9}{\url{https://docs.python.org/3/library/subprocess.html\#replacing-shell-pipeline}}
+\end{frame}
+
 % background color post
 }
 
