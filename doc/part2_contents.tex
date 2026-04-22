@@ -1,37 +1,4 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Environment Variables
-
-\section{Environment Variables}
-\begin{frame}
-    \vspace{25mm}
-    \begin{center}
-        \Huge{Part 7:\\Environment Variables}
-    \end{center}
-\end{frame}
-
-\begin{frame}[fragile]
-  \frametitle{Environment Variables}
-  \vspace{3mm}
-  
-  \inputminted[fontsize=\small]{python}{../src/env.py}
-  
-  \pause
-  \vspace{5mm}
-  \begin{verbatim}
-$ python3 ../src/env.py
-SHELL -> /bin/bash
-SESSION_MANAGER -> local/gaia:@/tmp/.ICE-unix/3401,unix/gaia:/tmp/.ICE-unix/3401
-QT_ACCESSIBILITY -> 1
-COLORTERM -> truecolor
-XDG_MENU_PREFIX -> gnome-
-GNOME_DESKTOP_SESSION_ID -> this-is-deprecated
-HOSTALIASES -> /home/aslak/.hosts
-SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
-DOTNET_CLI_TELEMETRY_OPTOUT -> 1
-  \end{verbatim}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Command-Line Arguments
 
 % Notes: venv, uv
@@ -242,6 +209,29 @@ False
       
     \end{tikzpicture}
   \end{center}
+\end{frame}
+
+\subsection{Environment Variables}
+\begin{frame}[fragile]
+  \frametitle{Processes \subpart{Environment Variables}}
+  \vspace{3mm}
+  
+  \inputminted[fontsize=\small]{python}{../src/env.py}
+  
+  \pause
+  \vspace{5mm}
+  \begin{verbatim}
+$ python3 ../src/env.py
+SHELL -> /bin/bash
+SESSION_MANAGER -> local/gaia:@/tmp/.ICE-unix/3401,unix/gaia:/tmp/.ICE-unix/3401
+QT_ACCESSIBILITY -> 1
+COLORTERM -> truecolor
+XDG_MENU_PREFIX -> gnome-
+GNOME_DESKTOP_SESSION_ID -> this-is-deprecated
+HOSTALIASES -> /home/aslak/.hosts
+SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
+DOTNET_CLI_TELEMETRY_OPTOUT -> 1
+  \end{verbatim}
 \end{frame}
 
 \subsection{Process Interaction}
