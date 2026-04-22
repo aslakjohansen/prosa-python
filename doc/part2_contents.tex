@@ -1,28 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Command-Line Arguments
-
 % Notes: venv, uv
-
-\section{Command-Line Arguments}
-\defverbatim[colored]\contentCLA{
-\begin{minted}{python}
-from sys import argv, exit
-
-if len(argv) != 3:
-    print('Syntax: %s INPUT_FILENAME OUTPUT_FILENAME' % argv[0])
-    print('        %s log.txt analysis.csv' % argv[0])
-    exit(1)
-input_filename  = argv[1]
-output_filename = argv[2]
-
-print('%s -> %s' % (input_filename, output_filename))
-\end{minted}
-}
-\begin{frame}
-    \frametitle{Command-Line Arguments}
-    \vspace{3mm}
-    \contentCLA
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Files
@@ -232,6 +208,27 @@ HOSTALIASES -> /home/aslak/.hosts
 SSH_AUTH_SOCK -> /run/user/1000/keyring/ssh
 DOTNET_CLI_TELEMETRY_OPTOUT -> 1
   \end{verbatim}
+\end{frame}
+
+\section{Command-Line Arguments}
+\defverbatim[colored]\contentCLA{
+\begin{minted}{python}
+from sys import argv, exit
+
+if len(argv) != 3:
+    print('Syntax: %s INPUT_FILENAME OUTPUT_FILENAME' % argv[0])
+    print('        %s log.txt analysis.csv' % argv[0])
+    exit(1)
+input_filename  = argv[1]
+output_filename = argv[2]
+
+print('%s -> %s' % (input_filename, output_filename))
+\end{minted}
+}
+\begin{frame}
+    \frametitle{Command-Line Arguments}
+    \vspace{3mm}
+    \contentCLA
 \end{frame}
 
 \subsection{Process Interaction}
