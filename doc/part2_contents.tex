@@ -1,7 +1,19 @@
 % Notes: venv, uv
 
+\definecolor{files}{rgb}{    \componentA, \componentB, \componentC}
+\definecolor{re}{rgb}{       \componentB, \componentC, \componentA}
+\definecolor{json}{rgb}{     \componentC, \componentA, \componentB}
+\definecolor{processes}{rgb}{\componentA, \componentB, \componentC}
+\definecolor{env}{rgb}{      \componentB, \componentC, \componentA}
+\definecolor{ex}{rgb}{       \componentC, \componentA, \componentB}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Files
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=files}
+\renewcommand{\bgcolor}{files}
 
 \section{Files}
 \begin{frame}
@@ -135,8 +147,16 @@ False
     \contentListdir
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Regular Expressions
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=re}
+\renewcommand{\bgcolor}{re}
 
 \section{Regular Expressions}
 \begin{frame}
@@ -182,8 +202,16 @@ proto="http" domain="www.google.com" port=":80" path="/"
     }
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Marshalling and JSON
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=json}
+\renewcommand{\bgcolor}{json}
 
 \section{Marshalling and JSON}
 \begin{frame}
@@ -227,8 +255,16 @@ proto="http" domain="www.google.com" port=":80" path="/"
     \contentJSON
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Processes
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=processes}
+\renewcommand{\bgcolor}{processes}
 
 \section{Processes}
 \begin{frame}
@@ -369,8 +405,16 @@ lib
   }
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Python Environments
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=env}
+\renewcommand{\bgcolor}{env}
 
 \section{Python Environments}
 \begin{frame}
@@ -415,8 +459,16 @@ lib
     
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercises
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=ex}
+\renewcommand{\bgcolor}{ex}
 
 \section{Exercises}
 \begin{frame}
@@ -479,6 +531,9 @@ lib
     \vspace{3mm}
     
 \end{frame}
+
+% background color post
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Questions
