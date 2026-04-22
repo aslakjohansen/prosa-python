@@ -5,5 +5,5 @@ def system (command, err=STDOUT, out=PIPE):
     output = p.communicate()[0]
     return output.decode('utf-8') 
 
-output = system('ls /')
+output = system('ls /') # perhaps 'dir c:' on windows
 print(output)
