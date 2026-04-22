@@ -215,19 +215,22 @@
     \vspace{5mm}
     
     \begin{itemize}
-      \descitem{Interpreted:}
+      \pause \descitem{Interpreted:}
         \begin{itemize}
-          \item C: \textcolor{purple}{compiler} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{execution}
-          \item Java: \textcolor{purple}{compiler} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{bytecode}; \textcolor{purple}{bytecode} + \textcolor{purple}{interpreter} $\rightarrow$ \textcolor{purple}{execution}
-          \item Python: \textcolor{purple}{interpreter} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{execution}
+          \pause \item C: \textcolor{purple}{compiler} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{execution}
+          \pause \item Java: \textcolor{purple}{compiler} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{bytecode}; \textcolor{purple}{bytecode} + \textcolor{purple}{interpreter} $\rightarrow$ \textcolor{purple}{execution}
+          \pause \item Python: \textcolor{purple}{interpreter} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{execution}
         \end{itemize}
-      \descitem{Garbage Collected:} Makes use of automatic memory management (no need to keep tract of when to \textsl{free} individual allocations).
-      \descitem{Dynamically Typed:} Type safety is verified at runtime.
+      \pause \descitem{Garbage Collected:} Makes use of automatic memory management (no need to keep tract of when to \textsl{free} individual allocations).
+      \pause \descitem{Dynamically Typed:} Type safety is verified at runtime.
         \begin{itemize}
-          \item Optional typing: \url{https://docs.python.org/3/library/typing.html}
+          \pause \item Optional typing: \url{https://docs.python.org/3/library/typing.html}
         \end{itemize}
-      \descitem{Late Binding:} Names are looked up at runtime.
-      \descitem{High-Level:} Focus is on serving as a good language for abstract (as in: machine distant) operations.
+      \pause \descitem{Late Binding:} Names are looked up at runtime.
+        \begin{itemize}
+          \pause \item Run-time errors on name lookup.
+        \end{itemize}
+      \pause \descitem{High-Level:} Focus is on serving as a good language for abstract (as in: machine distant) operations.
     \end{itemize}
 \end{frame}
 
