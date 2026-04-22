@@ -76,30 +76,30 @@
       \node[blank] (future)  at ( 1*\xspacing,0*\yspacing) {\textbf{Future}};
       
       \node[linelabel] ()          at (-2.25*\xspacing,-1*\yspacing) {\textbf{Scripting:}};
-      \node[blank] (scriptpast)    at (-1*\xspacing,-1*\yspacing) {TCL,Perl};
-      \node[blank] (scriptpresent) at ( 0*\xspacing,-1*\yspacing) {Python+Elixir};
-      \node[blank] (scriptfuture)  at ( 1*\xspacing,-1*\yspacing) {Python+Elixir};
+      \node[blank] (scriptpast)    at (-1*\xspacing,-1*\yspacing) {\textcolor{purple}{TCL},\textcolor{purple}{Perl}};
+      \node[blank] (scriptpresent) at ( 0*\xspacing,-1*\yspacing) {\textcolor{purple}{Python}+\textcolor{purple}{Elixir}};
+      \node[blank] (scriptfuture)  at ( 1*\xspacing,-1*\yspacing) {\textcolor{purple}{Python}+\textcolor{purple}{Elixir}};
       \draw[dedge] (scriptpast) -- (scriptpresent);
       \draw[dedge] (scriptpresent) -- (scriptfuture);
       
       \node[linelabel] ()          at (-2.25*\xspacing,-2*\yspacing) {\textbf{System:}};
-      \node[blank] (syspast)    at (-1*\xspacing,-2*\yspacing) {C};
-      \node[blank] (syspresent) at ( 0*\xspacing,-2*\yspacing) {C};
-      \node[blank] (sysfuture)  at ( 1*\xspacing,-2*\yspacing) {Rust/Zig};
+      \node[blank] (syspast)    at (-1*\xspacing,-2*\yspacing) {\textcolor{purple}{C}};
+      \node[blank] (syspresent) at ( 0*\xspacing,-2*\yspacing) {\textcolor{purple}{C}};
+      \node[blank] (sysfuture)  at ( 1*\xspacing,-2*\yspacing) {\textcolor{purple}{Rust}/\textcolor{purple}{Zig}};
       \draw[dedge] (syspast) -- (syspresent);
       \draw[dedge] (syspresent) -- (sysfuture);
       
       \node[linelabel] ()          at (-2.25*\xspacing,-3*\yspacing) {\textbf{Concurrency:}};
-      \node[blank] (concpast)    at (-1*\xspacing,-3*\yspacing) {Go};
-      \node[blank] (concpresent) at ( 0*\xspacing,-3*\yspacing) {Elixir};
-      \node[blank] (concfuture)  at ( 1*\xspacing,-3*\yspacing) {Elixir+Rust};
+      \node[blank] (concpast)    at (-1*\xspacing,-3*\yspacing) {\textcolor{purple}{Go}};
+      \node[blank] (concpresent) at ( 0*\xspacing,-3*\yspacing) {\textcolor{purple}{Elixir}};
+      \node[blank] (concfuture)  at ( 1*\xspacing,-3*\yspacing) {\textcolor{purple}{Elixir}+\textcolor{purple}{Rust}};
       \draw[dedge] (concpast) -- (concpresent);
       \draw[dedge] (concpresent) -- (concfuture);
       
       \node[linelabel] ()          at (-2.25*\xspacing,-4*\yspacing) {\textbf{Presentation:}};
-      \node[blank] (prespast)    at (-1*\xspacing,-4*\yspacing) {Postscript};
-      \node[blank] (prespresent) at ( 0*\xspacing,-4*\yspacing) {Cairo+SVG+TikZ};
-      \node[blank] (presfuture)  at ( 1*\xspacing,-4*\yspacing) {Cairo+SVG+TikZ};
+      \node[blank] (prespast)    at (-1*\xspacing,-4*\yspacing) {\textcolor{purple}{Postscript}};
+      \node[blank] (prespresent) at ( 0*\xspacing,-4*\yspacing) {\textcolor{purple}{Cairo}+\textcolor{purple}{SVG}+\textcolor{purple}{TikZ}};
+      \node[blank] (presfuture)  at ( 1*\xspacing,-4*\yspacing) {\textcolor{purple}{Cairo}+\textcolor{purple}{SVG}+\textcolor{purple}{TikZ}};
       \draw[dedge] (prespast) -- (prespresent);
       \draw[dedge] (prespresent) -- (presfuture);
     \end{tikzpicture}
@@ -217,9 +217,9 @@
     \begin{itemize}
       \descitem{Interpreted:}
         \begin{itemize}
-          \item C: compiler + code $\rightarrow$ code $\rightarrow$ execution
-          \item Java: compiler + code $\rightarrow$ bytecode; bytecode + interpreter $\rightarrow$ execution
-          \item Python: interpreter + code $\rightarrow$ execution
+          \item C: \textcolor{purple}{compiler} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{execution}
+          \item Java: \textcolor{purple}{compiler} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{bytecode}; \textcolor{purple}{bytecode} + \textcolor{purple}{interpreter} $\rightarrow$ \textcolor{purple}{execution}
+          \item Python: \textcolor{purple}{interpreter} + \textcolor{purple}{code} $\rightarrow$ \textcolor{purple}{execution}
         \end{itemize}
       \descitem{Garbage Collected:} Makes use of automatic memory management (no need to keep tract of when to \textsl{free} individual allocations).
       \descitem{Dynamically Typed:} Type safety is verified at runtime.
