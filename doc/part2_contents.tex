@@ -508,8 +508,27 @@ Successfully installed rdflib-7.6.0
 \subsection{Versioning Problem}
 \begin{frame}[fragile]
   \frametitle{Python Environments \subpart{Versioning Problem}}
-  \vspace{3mm}
+  \vspace{1mm}
+  Python code tend to be rather picky when it comes to module versions.
   
+  \pause
+  \vspace{5mm}
+  The more python codebases you have lying around the more likely you are to run into a versioning conflict. That is, \textbf{one piece of python code depends on a version of a module while a different piece of python code depends of an incompatible version of the same module}.
+  
+  \vspace{5mm}
+  These codebases cannot (successfully) coexist in the same environment: At most one can be executed.
+  
+  \pause
+  \vspace{5mm}
+  The trick is multiple environments. By default you have:
+  \begin{itemize}
+    \item The system-wide environment.
+    \item A per-user environment.
+  \end{itemize}
+  
+  \pause
+  \vspace{3mm}
+  But \ldots
 \end{frame}
 
 \subsection{Virtual Environments}
