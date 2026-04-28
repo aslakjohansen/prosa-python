@@ -430,7 +430,17 @@ lib
   \vspace{3mm}
   Python comes with a command-line tool for managing module installation: \texttt{pip} (sometimes called \texttt{pip3})
   
+  \pause
+  \vspace{5mm}
+  It allows you to install and uninstall python modules from the \textsl{Python Package Index} module repository: \url{https://pypi.org}
   
+  \pause
+  \vspace{5mm}
+  By default, modules are installed in their newest version, but one can also install specific versions for packages.
+  
+  \pause
+  \vspace{5mm}
+  Version are defined according to PEP 440 (which is not quite semantic versioning): \url{https://peps.python.org/pep-0440/}
 \end{frame}
 
 \subsubsection{Installation}
@@ -452,9 +462,9 @@ Successfully installed pyparsing-3.3.2 rdflib-7.6.0
   \end{minted}
 \end{frame}
 
-\subsubsection{Removal}
+\subsubsection{Uninstall}
 \begin{frame}[fragile]
-  \frametitle{Python Environments \subpart{Module Management} \subpart{Removal}}
+  \frametitle{Python Environments \subpart{Module Management} \subpart{Uninstall}}
   \vspace{3mm}
     \begin{minted}[fontsize=\footnotesize]{shell-session}
 (.venv) aslak@gaia:~/myproject$ pip3 uninstall rdflib
