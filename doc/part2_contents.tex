@@ -456,9 +456,16 @@ aslak@gaia:~/myproject$ ls -a .venv
 \begin{frame}[fragile]
   \frametitle{Python Environments \subpart{Virtual Environments} \subpart{Activating}}
   \vspace{3mm}
-  \begin{minted}{shell-session}
-
-  \end{minted}
+  Linux/macOS (bash/zsh): \\
+  \texttt{source .venv/bin/activate}
+  
+  \vspace{5mm}
+  Windows (cmd): \\
+  \texttt{.venv\textbackslash Scripts\textbackslash activate.bat}
+  
+  \vspace{5mm}
+  Windows (PowerShell): \\
+  \texttt{.venv\textbackslash Scripts\textbackslash Activate.ps1}
 \end{frame}
 
 \subsubsection{}
@@ -475,7 +482,9 @@ aslak@gaia:~/myproject$ ls -a .venv
   \frametitle{Python Environments \subpart{Virtual Environments} \subpart{Deactivating}}
   \vspace{3mm}
   \begin{minted}{shell-session}
-
+aslak@gaia:~/myproject$ source .venv/bin/activate
+(.venv) aslak@gaia:~/myproject$ deactivate
+aslak@gaia:~/myproject$
   \end{minted}
 \end{frame}
 
