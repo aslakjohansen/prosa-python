@@ -424,25 +424,56 @@ lib
   \end{center}
 \end{frame}
 
-\subsection{Installing Modules}
+\subsection{Modules Management}
 \begin{frame}[fragile]
   \frametitle{Python Environments \subpart{Installing Modules}}
   \vspace{3mm}
-  Python comes with a command-line tool for installing modules: \texttt{pip} (sometimes called \texttt{pip3})
-\end{frame}
-
-\subsubsection{}
-\begin{frame}[fragile]
-  \frametitle{Python Environments \subpart{Installing Modules} \subpart{}}
-  \vspace{3mm}
+  Python comes with a command-line tool for managing module installation: \texttt{pip} (sometimes called \texttt{pip3})
+  
   
 \end{frame}
 
-\subsubsection{}
+\subsubsection{Installation}
 \begin{frame}[fragile]
-  \frametitle{Python Environments \subpart{Installing Modules} \subpart{}}
+  \frametitle{Python Environments \subpart{Module Management} \subpart{Installation}}
   \vspace{3mm}
-  
+  \begin{minted}{shell-session}
+(.venv) aslak@gaia:~/myproject$ pip3 install rdflib
+Collecting rdflib
+  Downloading rdflib-7.6.0-py3-none-any.whl.metadata (12 kB)
+Collecting pyparsing<4,>=2.1.0 (from rdflib)
+  Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+Downloading rdflib-7.6.0-py3-none-any.whl (615 kB)
+Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+Installing collected packages: pyparsing, rdflib
+Successfully installed pyparsing-3.3.2 rdflib-7.6.0
+(.venv) aslak@gaia:~/myproject$ du -h . | tail -n 1
+19M	.
+  \end{minted}
+\end{frame}
+
+\subsubsection{Removal}
+\begin{frame}[fragile]
+  \frametitle{Python Environments \subpart{Module Management} \subpart{Removal}}
+  \vspace{3mm}
+    \begin{minted}[fontsize=\footnotesize]{shell-session}
+(.venv) aslak@gaia:~/myproject$ pip3 uninstall rdflib
+Found existing installation: rdflib 7.6.0
+Uninstalling rdflib-7.6.0:
+  Would remove:
+    /home/aslak/myproject/.venv/bin/csv2rdf
+    /home/aslak/myproject/.venv/bin/rdf2dot
+    /home/aslak/myproject/.venv/bin/rdfgraphisomorphism
+    /home/aslak/myproject/.venv/bin/rdfpipe
+    /home/aslak/myproject/.venv/bin/rdfs2dot
+    /home/aslak/myproject/.venv/bin/sparqlquery
+    /home/aslak/myproject/.venv/lib/python3.13/site-packages/rdflib-7.6.0.dist-info/*
+    /home/aslak/myproject/.venv/lib/python3.13/site-packages/rdflib/*
+Proceed (Y/n)? y
+  Successfully uninstalled rdflib-7.6.0
+(.venv) aslak@gaia:~/myproject$ du -h . | tail -n 1
+14M	.
+  \end{minted}
 \end{frame}
 
 \subsection{Versioning Problem}
