@@ -476,6 +476,35 @@ Proceed (Y/n)? y
   \end{minted}
 \end{frame}
 
+\subsubsection{Freezing Versions}
+\begin{frame}[fragile]
+  \frametitle{Python Environments \subpart{Module Management} \subpart{Freezing Versions}}
+  \vspace{3mm}
+    \begin{minted}{shell-session}
+(.venv) aslak@gaia:~/myproject$ pip freeze > requirements.txt
+(.venv) aslak@gaia:~/myproject$ cat requirements.txt
+pyparsing==3.3.2
+rdflib==7.6.0
+(.venv) aslak@gaia:~/myproject$
+  \end{minted}
+\end{frame}
+
+\subsubsection{Reestablishing Versions}
+\begin{frame}[fragile]
+  \frametitle{Python Environments \subpart{Module Management} \subpart{Reestablishing Versions}}
+  \vspace{3mm}
+    \begin{minted}[fontsize=\normalsize,breaklines]{shell-session}
+(.venv) aslak@gaia:~/myproject$ pip3 install -r requirements.txt
+Requirement already satisfied: pyparsing==3.3.2 in ./.venv/lib/python3.13/site-packages (from -r requirements.txt (line 1)) (3.3.2)
+Collecting rdflib==7.6.0 (from -r requirements.txt (line 2))
+  Using cached rdflib-7.6.0-py3-none-any.whl.metadata (12 kB)
+Using cached rdflib-7.6.0-py3-none-any.whl (615 kB)
+Installing collected packages: rdflib
+Successfully installed rdflib-7.6.0
+(.venv) aslak@gaia:~/myproject$
+  \end{minted}
+\end{frame}
+
 \subsection{Versioning Problem}
 \begin{frame}[fragile]
   \frametitle{Python Environments \subpart{Versioning Problem}}
