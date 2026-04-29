@@ -202,6 +202,25 @@ proto="http" domain="www.google.com" port=":80" path="/"
     }
 \end{frame}
 
+\section{Further Reading}
+\begin{frame}[fragile]
+  \frametitle{Regular Expressions \subsection{Further Reading}}
+  \pause
+  \vspace{5mm}
+  Documentation for the \texttt{re} module: \\
+  \url{https://docs.python.org/3/library/re.html}
+  
+  \pause
+  \vspace{5mm}
+  A few notes:
+  \begin{itemize}
+    \item One can match individual characters or character classes.
+    \item A period matches any character.
+    \item One can match the beginning of a string and the end of a string.
+    \item Regular expressions are often used along with string slicing and splits.
+  \end{itemize}
+\end{frame}
+
 % background color post
 }
 
@@ -222,7 +241,7 @@ proto="http" domain="www.google.com" port=":80" path="/"
 \end{frame}
 
 \defverbatim[colored]\contentJSON{
-\begin{minted}[fontsize=\tiny]{pycon}
+\begin{minted}[fontsize=\footnotesize]{pycon}
 >>> import json
 >>> data = {'a': 1, 'b': [1,2,3], 'c': 'abc'}
 >>> data
@@ -678,6 +697,26 @@ aslak@gaia:~/myproject$
     
     \vspace{5mm}
     How similar is the new datastructure to the old?
+\end{frame}
+
+\subsection{Regular Expressions}
+\begin{frame}[fragile]
+    \frametitle{Exercises \subpart{Regular Expressions}}
+    \vspace{0mm}
+    You input text: \textsl{\textcolor{purple}{\say{Avocados are considered expensive but delicious. In the US they are about 1\$. In Denmark they are approx 15 kr and in Holland they are roughly 1.5€. In the UK the price is 1.5 £.}}}
+    
+    \vspace{5mm}
+    Here we have a string containing 4 different prices for avocados. The exercise is to find the average price.
+    
+    \vspace{5mm}
+    Specifically:
+    \begin{enumerate}
+      \item Define a dictionary that maps currencies to conversion factors.
+      \item Define a regular expression that matches a number followed by a currency.
+      \item Find all matches of this regular expression.
+      \item For each match, look up the conversions factor, parse the number and multiply these.
+      \item Find the average value.
+    \end{enumerate}
 \end{frame}
 
 \subsection{CSV Corrections}
