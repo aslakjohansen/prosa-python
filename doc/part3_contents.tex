@@ -1,7 +1,15 @@
-\definecolor{ex}{rgb}{       \componentC, \componentA, \componentB}
+\definecolor{http}{rgb}{\componentA, \componentB, \componentC}
+\definecolor{xlsx}{rgb}{\componentB, \componentC, \componentA}
+\definecolor{next}{rgb}{\componentC, \componentA, \componentB}
+\definecolor{ex}{rgb}{  \componentA, \componentB, \componentC}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% HTTP Client Operations
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=http}
+\renewcommand{\bgcolor}{http}
 
 \section{HTTP Client Operations}
 \begin{frame}
@@ -23,8 +31,16 @@
     \vspace{3mm}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% XLSX Files
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=xlsx}
+\renewcommand{\bgcolor}{xlsx}
 
 \section{XLSX Files}
 \begin{frame}
@@ -88,8 +104,16 @@
     \vspace{3mm}
 \end{frame}
 
+% background color post
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Next Steps
+
+% background color pre
+{
+\setbeamercolor{background canvas}{bg=next}
+\renewcommand{\bgcolor}{next}
 
 \section{Next Steps}
 \begin{frame}
@@ -207,6 +231,9 @@ thera
             \url{https://greenteapress.com/wp/think-stats-2e/}
     \end{itemize}
 \end{frame}
+
+% background color post
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Exercises
