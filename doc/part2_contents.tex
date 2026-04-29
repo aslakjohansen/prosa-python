@@ -240,8 +240,11 @@ proto="http" domain="www.google.com" port=":80" path="/"
     \end{center}
 \end{frame}
 
-\defverbatim[colored]\contentJSON{
-\begin{minted}[fontsize=\footnotesize]{pycon}
+\subsection{Marshalling}
+\begin{frame}[fragile]
+  \frametitle{Marshalling and JSON \subpart{Marshalling}}
+  \vspace{0mm}
+  \begin{minted}[fontsize=\footnotesize]{pycon}
 >>> import json
 >>> data = {'a': 1, 'b': [1,2,3], 'c': 'abc'}
 >>> data
@@ -262,16 +265,18 @@ proto="http" domain="www.google.com" port=":80" path="/"
     ],
     "c": "abc"
 }
+  \end{minted}
+\end{frame}
 
+\subsection{Unmarshalling}
+\begin{frame}[fragile]
+  \frametitle{Marshalling and JSON \subpart{Unmarshalling}}
+  \vspace{0mm}
+  \begin{minted}[fontsize=\footnotesize]{pycon}
 >>> data2 = json.loads(s)
 >>> data2
 {'a': 1, 'b': [1, 2, 3], 'c': 'abc'}
-\end{minted}
-}
-\begin{frame}
-    \frametitle{Marshalling and JSON}
-    \vspace{0mm}
-    \contentJSON
+  \end{minted}
 \end{frame}
 
 % background color post
@@ -356,6 +361,17 @@ proto="http" domain="www.google.com" port=":80" path="/"
       
     \end{tikzpicture}
   \end{center}
+\end{frame}
+
+\subsection{Working Directory}
+\begin{frame}[fragile]
+  \frametitle{Processes \subpart{Working Directory}}
+  \vspace{3mm}
+  \begin{minted}[fontsize=\footnotesize]{pycon}
+>>> import os
+>>> os.getcwd()
+'/home/aslak/myproject'
+  \end{minted}
 \end{frame}
 
 \subsection{Environment Variables}
