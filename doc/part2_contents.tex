@@ -616,7 +616,19 @@ aslak@gaia:~/myproject$
 \begin{frame}[fragile]
   \frametitle{Python Environments \subpart{Alternative Tooling}}
   \vspace{3mm}
+  \texttt{pip} has a number of downsides:
+  \begin{itemize}
+    \item A \textsl{freeze} generates platform-specific list of module versions.
+    \item It operates at a low granularity of control.
+    \item It can be slow and reource hungry in CI/CD pipelines.
+  \end{itemize}
   
+  \pause
+  \vspace{5mm}
+  The \texttt{uv} project tries to address this: \url{https://docs.astral.sh/uv/}
+  
+  \vspace{5mm}
+  It claims to be compatible with \texttt{pip}.
 \end{frame}
 
 %\subsubsection{}
