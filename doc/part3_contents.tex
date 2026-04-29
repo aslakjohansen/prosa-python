@@ -39,6 +39,18 @@ pip install requests
 \begin{frame}[fragile]
   \frametitle{HTTP Client Operations \subpart{GET Operations}}
   \vspace{3mm}
+  \begin{minted}{python}
+import requests
+
+response = requests.get("https://www.prosa.dk")
+
+print(response.status_code)
+print(response.text)
+  \end{minted}
+  
+  \pause
+  \vspace{5mm}
+  Similar functionality exists for POST, PUT \ldots
 \end{frame}
 
 % background color post
