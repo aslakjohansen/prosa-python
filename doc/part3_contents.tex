@@ -77,6 +77,17 @@ print(response.text)
 \begin{frame}[fragile]
   \frametitle{XLSX Files \subpart{Loading and Storing}}
   \vspace{3mm}
+  \begin{minted}{python}
+import openpyxl
+
+# one of
+wb = openpyxl.Workbook()
+wb = openpyxl.load_workbook(filename='input.xlsx')
+
+# work with wb ...
+
+wb.save("output.xlsx")
+  \end{minted}
 \end{frame}
 
 \subsection{Cells}
