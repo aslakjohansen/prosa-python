@@ -138,10 +138,15 @@ first_sheet.title = "new title"
   \small{\url{https://openpyxl.readthedocs.io/en/stable/api/openpyxl.styles.fonts.html#module-openpyxl.styles.fonts}}
 \end{frame}
 
-\subsection{Alignment}
+\subsection{Horizontal Alignment}
 \begin{frame}[fragile]
-  \frametitle{XLSX Files \subpart{Alignment}}
+  \frametitle{XLSX Files \subpart{Horizontal Alignment}}
   \vspace{3mm}
+  \begin{minted}{pycon}
+>>> from openpyxl.styles import Alignment
+>>> center = Alignment(horizontal='center')
+>>> cell.alignment = center
+  \end{minted}
 \end{frame}
 
 \subsection{Background}
