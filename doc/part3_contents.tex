@@ -124,6 +124,18 @@ first_sheet.title = "new title"
 \begin{frame}[fragile]
   \frametitle{XLSX Files \subpart{Fonts}}
   \vspace{3mm}
+  \begin{minted}{pycon}
+>>> from openpyxl.styles import Font
+>>> help(Font)
+
+>>> font = Font(bold=True, italic=True)
+>>> cell.font = font
+  \end{minted}
+  
+  \pause
+  \vspace{5mm}
+  Documentation:\\
+  \small{\url{https://openpyxl.readthedocs.io/en/stable/api/openpyxl.styles.fonts.html#module-openpyxl.styles.fonts}}
 \end{frame}
 
 \subsection{Alignment}
