@@ -108,6 +108,16 @@ first_sheet.title = "new title"
 \begin{frame}[fragile]
   \frametitle{XLSX Files \subpart{Cells}}
   \vspace{3mm}
+  \begin{minted}{pycon}
+>>> from openpyxl.utils import get_column_letter
+>>> sheet = wb.active
+>>> cell = sheet["A1"]
+>>> cell.value = 1
+>>> print(sheet.cell(row=1, column=1).value)
+1
+>>> get_column_letter(1)
+'A'
+  \end{minted}
 \end{frame}
 
 \subsection{Fonts}
