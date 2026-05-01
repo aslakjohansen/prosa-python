@@ -94,6 +94,14 @@ wb.save("output.xlsx")
 \begin{frame}[fragile]
   \frametitle{XLSX Files \subpart{Sheets}}
   \vspace{3mm}
+  \begin{minted}{python}
+sheet = wb.active
+
+sheets = wb.worksheets
+first_sheet = sheets[0]
+
+first_sheet.title = "new title"
+  \end{minted}
 \end{frame}
 
 \subsection{Cells}
