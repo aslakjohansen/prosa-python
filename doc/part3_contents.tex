@@ -352,6 +352,25 @@ thera
   Make a program that downloads this link and stores the file locally as \texttt{popdata.csv}.
 \end{frame}
 
+\subsection{Process Data}
+\begin{frame}[fragile]
+  \frametitle{Exercises \subpart{Process Data}}
+  \vspace{3mm}
+  Make a new program that:
+  \begin{enumerate}
+    \item Reads \texttt{popdata.csv} from the last exercise.
+    \item Process the data:
+      \begin{enumerate}
+        \item The second column contains an area descriptor. Drop all rows that do not have a country name in this row.
+        \item The fourth column is the metric. Drop all rows that do not cover the \say{Population density} metric.
+        \item The third column is the year. Drop all but the newest year that has the \say{Population density} metric.
+        \item The fifth column has the value (i.e., the population density). We care about this.
+      \end{enumerate}
+    \item Based on the processed data, produce a data structure that maps country name to population density.
+    \item Marshals the data structure to JSON format and store it as \texttt{popdata.json}.
+  \end{enumerate}
+\end{frame}
+
 \subsection{Countries and Continents}
 \begin{frame}[fragile]
   \frametitle{Exercises \subpart{Countries and Continents [1/3]}}
